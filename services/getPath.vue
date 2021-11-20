@@ -25,16 +25,14 @@ app.mixin({
 			}
 			// }}}
 
-			var node = target;
-			return (_.isString(path) ? path.split('.') : path).find((chunk, chunkIndex, chunks) => {
+		return (_.isString(path) ? path.split('.') : path)
+			.reduce((node, chunk) => {
 				if (node[chunk] === undefined) { // Endpoint or path waypoint doesn't exist
 					return fallback;
-				} else if (chunkIndex == chunks.length - 1) { // At leaf node
-					return node[chunk];
 				} else { // Keep traversing down branch node
-					node = node[chunk];
+					return node[chunk];
 				}
-			});
+			}, target);
 		},
 	},
 });

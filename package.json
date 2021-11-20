@@ -1,6 +1,6 @@
 {
   "name": "@doop/service-data",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Various services for data structure manipulation for the Doop framework",
   "repository": {
     "type": "git",
