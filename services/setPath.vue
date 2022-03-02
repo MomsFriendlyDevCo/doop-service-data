@@ -1,4 +1,5 @@
 <script lang="js" frontend>
+// TODO: Import vue-setpath, we have a few Vue features (emit, watch-all) where this makes sense
 /**
 * Set a dotted notation or array path to a set value
 * This function will correctly populate any missing entities, calling vm.$set on each traversal of the path
